@@ -5,7 +5,7 @@ We foster the openness, integrity, and reproducibility of scientific research.
 
 ## How to use this repository?
 
-This repository hosts, various scripts and tools to collect and process virus genomes. Feel free to adapt the scripts and tools, but remember to cite their authors!
+This repository hosts, various scripts and tools to collect and process (virus) genomes. Feel free to adapt the scripts and tools, but remember to cite their authors!
 
 To look at our scripts, **browse** through this repository. If you want to use some of the scripts, you will need to **clone** this repository. If you want to use our scripts for our own research, **fork** this repository and **cite** the authors.
 
@@ -46,6 +46,9 @@ Usage: import_genomes.pl --query <Entrez search string>
 ```
 
 ```
+# All viruses (and genome map "-m")
+./import_genomes.pl --query "txid10239[Organism:exp]" -m -v > downloading_script.sh
+
 # All fish genomes (all vertebrate excluding the tetrapods)
 ./import_genomes.pl --query "(Vertebrata[Organism]) NOT Tetrapoda[Organism] AND (latest[filter] AND all[filter] NOT anomalous[filter])" -v > downloading_script.sh
 
@@ -68,4 +71,3 @@ You are invited to contribute new features, fixes, or updates, large or small; w
 
 
 This code is distributed under the [GNU GPL license v3](https://www.gnu.org/licenses/gpl-3.0.html). The documentation, raw data and work are licensed under a [Creative Commons Attribution-ShareAlike 4.0 International License](https://creativecommons.org/licenses/by-sa/4.0/).​
-
